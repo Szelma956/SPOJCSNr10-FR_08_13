@@ -383,20 +383,25 @@ namespace FR_08_13
     {
         static void Main()
         {
-            int x;
+            long x;
+            string y = "";
+            int z;
             Matemax matemax = new Matemax();
 
             int t = int.Parse(System.Console.ReadLine());
 
             for (int i = 0; i < t; i++)
             {
-                x = int.Parse(System.Console.ReadLine());
+                x = long.Parse(System.Console.ReadLine());
                 x = x % 360;
-                if (x < 0) 
+                y = y + x;
+                z = int.Parse(y);
+                if (z < 0) 
                 {
-                    x = x * -1;
+                    z = z * -1;
                 }
-                matemax.PrintObject(x);
+                matemax.PrintObject(z);
+                y = "";
             }
         }
     }
