@@ -387,16 +387,12 @@ namespace FR_08_13
             Matemax matemax = new Matemax();
 
             int t = int.Parse(System.Console.ReadLine());
+            System.Console.ReadLine();
 
             for (int i = 0; i < t; i++)
             {
                 x = int.Parse(System.Console.ReadLine());
                 matemax.PrintObject(x);
-            }
-            for(int j = 0; j < 361; j++)
-            {
-                
-                matemax.PrintObject(j);
             }
         }
     }
