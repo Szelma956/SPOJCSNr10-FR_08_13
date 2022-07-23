@@ -5,7 +5,7 @@ namespace FR_08_13
 
     class Matemax
     {
-        string[,] tabT = new string[361,4];
+        string[,] tabT = new string[361, 4];
         public Matemax()
         {
 
@@ -393,13 +393,17 @@ namespace FR_08_13
             for (int i = 0; i < t; i++)
             {
                 x = long.Parse(System.Console.ReadLine());
-                x = x % 360;
+                if (x > 0)
+                {
+                    x = x % 360;
+                }
+                else 
+                {
+                    long n = x / -360;
+                    x = x + (n + 1) * 360;
+                }
                 y = y + x;
                 z = int.Parse(y);
-                if (z < 0) 
-                {
-                    z = z * -1;
-                }
                 matemax.PrintObject(z);
                 y = "";
             }
